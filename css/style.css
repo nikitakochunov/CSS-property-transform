@@ -1,0 +1,111 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  background-color: bisque;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+.container {
+  padding: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.property {
+  margin-bottom: 30px;
+  margin-right: 90px;
+}
+
+.property__background {
+  width: 200px;
+  height: 200px;
+  background: rgba(71, 175, 194, 0.3);
+}
+
+.property__block {
+  width: 100%;
+  height: 100%;
+  background: #47afc2;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.translate {
+  -webkit-transform: translate(50px, 50px);
+          transform: translate(50px, 50px);
+}
+
+.scale {
+  -webkit-transform: scale(0.5, 0.5);
+          transform: scale(0.5, 0.5);
+}
+
+.rotate {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.skew {
+  -webkit-transform: skew(-15deg, -15deg);
+          transform: skew(-15deg, -15deg);
+}
+
+.many-transforms {
+  -webkit-transform: translate(50px, 50px) scale(0.5) rotate(45deg);
+          transform: translate(50px, 50px) scale(0.5) rotate(45deg);
+}
+
+h1 {
+  color: black;
+  margin-bottom: 10px;
+}
+
+button {
+  border: none;
+}
+
+.buttons {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  top: 1%;
+  right: 0;
+  -webkit-transform: translate(-10%, 0);
+          transform: translate(-10%, 0);
+}
+
+.buttons .btn {
+  width: 80px;
+  height: 40px;
+  margin-bottom: 10px;
+  background: #c45e5e;
+  color: white;
+  border: 2px solid #af4040;
+}
+
+.buttons .btn:hover {
+  background: #d28383;
+}
