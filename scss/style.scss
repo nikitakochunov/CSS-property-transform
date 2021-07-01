@@ -23,6 +23,13 @@ $block-color: rgb(71, 175, 194);
 .property {
     margin-bottom: 30px;
     margin-right: 90px;
+
+    h1 {
+        color: black;
+        margin-bottom: 10px;
+        font-size: 24px;
+    }
+
     &__background {
         width: 200px;
         height: 200px;
@@ -79,9 +86,9 @@ $block-color: rgb(71, 175, 194);
     transform: translate(50px, 50px) scale(0.5) rotate(45deg);
 }
 
-h1 {
-    color: black;
-    margin-bottom: 10px;
+.transform-origin {
+    transform: rotate(45deg);
+    transform-origin: top left;
 }
 
 button {

@@ -1,46 +1,54 @@
-const translateBtn = document.querySelector('#btn--translate')
-const scaleBtn = document.querySelector('#btn--scale')
-const rotateBtn = document.querySelector('#btn--rotate')
-const skewBtn = document.querySelector('#btn--skew')
 
-// translateBtn.addEventListener('click', () => {
-//     const block = findBlock('translate')
-//     block.classList.add('translate')
-// })
+function findBlock(transformation) {
+    const propertySelector = `.property--${transformation}`
+    return document.querySelector(propertySelector).lastElementChild.lastElementChild
+}
+
+function createBtn(transformation) {
+    const idOfButton = `btn--${transformation}`
+    buttons = document.querySelectorAll('button')
+    for (let button of buttons) {
+        if (button.id === idOfButton) {
+            button.addEventListener('click', () => {
+                const block = findBlock(transformation)
+                if (button.classList.contains('btn--reset')) {
+                    block.classList.remove(transformation)
+                    button.classList.remove('btn--reset')
+                    button.innerText = button.getAttribute('data-name')
+                } else {
+                    block.classList.add(transformation)
+                    button.classList.add('btn--reset')
+                    button.setAttribute('data-name', button.innerText)
+                    button.innerText = 'Un' + transformation
+                }
+            })
+        }
+    }
+    console.log(`Button for ${transformation} is found`)
+}
 
 createBtn('translate')
 
-// scaleBtn.addEventListener('click', () => {
-//     scaleBlock.classList.add('scale')
-// })
-
 createBtn('scale')
 
-// rotateBtn.addEventListener('click', () => {
-//     rotateBlock.classList.add('rotate')
-// })
-
 createBtn('rotate')
-
-// skewBtn.addEventListener('click', () => {
-//     skewBlock.classList.add('skew')
-// })
 
 createBtn('skew')
 
 createBtn('many-transforms')
 
-function findBlock(transformation) {
-    const selector = `.property--${transformation}`
-    return document.querySelector(selector).lastElementChild.lastElementChild
-}
+createBtn('transform-origin')
 
-function createBtn(transformation) {
-    const selector = `#btn--${transformation}`
-    button = document.querySelector(selector)
-    button.addEventListener('click', () => {
-        const block = findBlock(transformation)
-        block.classList.add(transformation)
-    })
-    console.log(`Button for ${transformation} is found`)
-}
+const resetBtn = document.querySelector('#btn--reset-all')
+resetBtn.addEventListener('click', () => {
+    const blocks = document.querySelectorAll('.property__block')
+    for (let block of blocks) {
+        block.classList = 'property__block'
+    }
+    for (let button of buttons) {
+        if (button.classList.contains('btn--reset')) {
+            button.classList.remove('btn--reset')
+            button.innerText = button.getAttribute('data-name')
+        }
+    }
+})

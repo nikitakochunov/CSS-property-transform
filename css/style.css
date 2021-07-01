@@ -32,6 +32,12 @@ body {
   margin-right: 90px;
 }
 
+.property h1 {
+  color: black;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
 .property__background {
   width: 200px;
   height: 200px;
@@ -73,9 +79,11 @@ body {
           transform: translate(50px, 50px) scale(0.5) rotate(45deg);
 }
 
-h1 {
-  color: black;
-  margin-bottom: 10px;
+.transform-origin {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
 }
 
 button {
