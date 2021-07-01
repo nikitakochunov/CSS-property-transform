@@ -55,8 +55,8 @@ body {
 }
 
 .translate {
-  -webkit-transform: translate(50px, 50px);
-          transform: translate(50px, 50px);
+  -webkit-transform: translate(50px);
+          transform: translate(50px);
 }
 
 .scale {
@@ -86,6 +86,23 @@ body {
           transform-origin: top left;
 }
 
+.perspective {
+  -webkit-transform: perspective(400px) rotateY(50deg);
+          transform: perspective(400px) rotateY(50deg);
+}
+
+.perspective-origin {
+  -webkit-transform: rotateY(50deg);
+          transform: rotateY(50deg);
+}
+
+.perspective-origin-for-bg {
+  -webkit-perspective: 400px;
+          perspective: 400px;
+  -webkit-perspective-origin: 0 0;
+          perspective-origin: 0 0;
+}
+
 button {
   border: none;
 }
@@ -106,7 +123,7 @@ button {
 }
 
 .buttons .btn {
-  width: 80px;
+  width: 100px;
   height: 40px;
   margin-bottom: 10px;
   background: #c45e5e;

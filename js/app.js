@@ -39,6 +39,10 @@ createBtn('many-transforms')
 
 createBtn('transform-origin')
 
+createBtn('perspective')
+
+createBtn('perspective-origin')
+
 const resetBtn = document.querySelector('#btn--reset-all')
 resetBtn.addEventListener('click', () => {
     const blocks = document.querySelectorAll('.property__block')

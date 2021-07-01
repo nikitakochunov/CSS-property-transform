@@ -34,6 +34,8 @@ $block-color: rgb(71, 175, 194);
         width: 200px;
         height: 200px;
         background: rgba($block-color, 0.3);
+        // perspective: 400px;
+        // perspective-origin: 0 0;
     }
 
     &__block {
@@ -44,30 +46,10 @@ $block-color: rgb(71, 175, 194);
         transition: transform 0.5s;
         // transform-origin: left bottom;
     }
-
-    // &--translate &__block:hover {
-    //     transform: translate(50px, 50px);
-    // }
-
-    // &--scale &__block:hover {
-    //     transform: scale(0.5, 0.5);
-    // }
-
-    // &--rotate &__block:hover {
-    //     transform: rotate(-45deg);
-    // }
-
-    // &--skew &__block:hover {
-    //     transform: skew(-15deg, -15deg);
-    // }
-
-    // &--many-transforms &__block:hover {
-    //     transform: translate(50px, 50px) scale(0.5) rotate(45deg);
-    // }
 }
 
 .translate {
-    transform: translate(50px, 50px);
+    transform: translate(50px);
 }
 
 .scale {
@@ -91,6 +73,18 @@ $block-color: rgb(71, 175, 194);
     transform-origin: top left;
 }
 
+.perspective {
+    transform: perspective(400px) rotateY(50deg);
+}
+
+.perspective-origin {
+    transform: rotateY(50deg);
+    &-for-bg {
+        perspective: 400px;
+        perspective-origin: 0 0;
+    }
+}
+
 button {
     border: none;
 }
@@ -104,7 +98,7 @@ button {
     transform: translate(-10%, 0);
 
     .btn {
-        width: 80px;
+        width: 100px;
         height: 40px;
         margin-bottom: 10px;
         background: rgb(196, 94, 94);
