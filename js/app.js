@@ -43,6 +43,20 @@ createBtn('perspective')
 
 createBtn('perspective-origin')
 
+createBtn('translate3D')
+
+createBtn('scale3D')
+
+createBtn('rotate3D')
+
+createBtn('many-transforms3D')
+
+createBtn('trf-style-flat')
+
+createBtn('trf-style-preserve-3d')
+
+createBtn('backface-visibility')
+
 const resetBtn = document.querySelector('#btn--reset-all')
 resetBtn.addEventListener('click', () => {
     const blocks = document.querySelectorAll('.property__block')
