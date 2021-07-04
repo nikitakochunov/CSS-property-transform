@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-=======
-// const translateBtn = document.querySelector('#btn--translate')
-// const scaleBtn = document.querySelector('#btn--scale')
-// const rotateBtn = document.querySelector('#btn--rotate')
-// const skewBtn = document.querySelector('#btn--skew')
->>>>>>> master
-
 function findBlock(transformation) {
     const propertySelector = `.property--${transformation}`
     return document.querySelector(propertySelector).lastElementChild.lastElementChild
