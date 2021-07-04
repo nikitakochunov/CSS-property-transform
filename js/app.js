@@ -1,7 +1,7 @@
-const translateBtn = document.querySelector('#btn--translate')
-const scaleBtn = document.querySelector('#btn--scale')
-const rotateBtn = document.querySelector('#btn--rotate')
-const skewBtn = document.querySelector('#btn--skew')
+// const translateBtn = document.querySelector('#btn--translate')
+// const scaleBtn = document.querySelector('#btn--scale')
+// const rotateBtn = document.querySelector('#btn--rotate')
+// const skewBtn = document.querySelector('#btn--skew')
 
 // translateBtn.addEventListener('click', () => {
 //     const block = findBlock('translate')
